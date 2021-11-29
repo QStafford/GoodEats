@@ -10,6 +10,18 @@ const createUser: React.FC<createUserProps> = (props) => {
 					</div>
 				</section>
 			</main>
+            <div className="input-group mb-3">
+                <input type="text" className="form-control" placeholder="New Username" aria-label="Username" aria-describedby="basic-addon1"></input>
+            </div>
+            <div className="input-group mb-3">
+                <input type="password" className="form-control" placeholder="Create Password"></input>
+            </div>
+            <div className="input-group mb-3">
+                <input type="password" className="form-control" placeholder="Confirm Password"></input>
+            </div>
+            <div className="input-group mb-3">
+                <input type="Email" className="form-control" placeholder="Email"></input>
+            </div>
 		</>
 	
 	)}
