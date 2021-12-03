@@ -1,14 +1,12 @@
 import * as React from 'react';
 
+import Map from '../components/Map'; 
+
 const Home: React.FC<HomeProps> = (props) => {
 	return (
 		<>
-			<main className="container">
-				<section className="row">
-					<div className="col-12">
-						<h1 className="display-1 text-center">Home View</h1>
-					</div>
-				</section>
+			<main className="container" style={{ margin: '0 auto'}}>
+						<Map />
 			</main>
 		</>
 	

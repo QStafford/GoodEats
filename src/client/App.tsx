@@ -9,10 +9,12 @@ import Restaurants from "./Pages/Restaurant";
 import Suggestions from "./Pages/Suggestions";
 import Users from "./Pages/User";
 import Post from "./Pages/Post";
+import Navbar from "./components/Navbar"
 
 const App: React.FC<AppProps> = (props) => {
 	return (
 		<BrowserRouter>
+			<Navbar />
 			<Routes>
 				<Route  path="/" element={<Home />} />
 				<Route  path="/Create" element={<Createuser />} />

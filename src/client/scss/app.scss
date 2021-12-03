@@ -1,24 +1,52 @@
-// First override some or all individual color variables
-$primary: #25408f;
-$secondary: #8f5325;
-$success: #3e8d63;
-$info: #13101c;
-$warning: #945707;
-$danger: #d62518;
+$grass: #72A05D;
+$tea: #05A9A8;
+$sea: #2B575D;
+$sky: #A2EDF8;
+$sun: #ffbb00;
+$sunset: #FFA101;
+$rust: #D9613B;
+$fire: #d62518;
 $light: #f8f9fa;
+$smoke: #F1EBEB;
 $dark: #343a40;
 
-// Then add them to your custom theme-colors map, together with any additional colors you might need
 $theme-colors: (
-	primary: $primary,
-	secondary: $secondary,
-	success: $success,
-	info: $info,
-	warning: $warning,
-	danger: $danger,
-	light: $light,
-	dark: $dark,
-	// add any additional color below
+	grass: $grass,
+	tea: $tea,
+	sea: $sea,
+	sky: $sky,
+	sun: $sun,
+	sunset: $sunset,
+	rust: $rust,
+	fire: $fire,
+    light: $light,
+    smoke: $smoke,
+    dark: $dark
 );
 
+$comfortaa: 'Comfortaa', cursive;
+$nunito-sans: 'Nunito Sans', sans-serif;
+
+.basic-font {
+	font-family: $comfortaa;
+	font-weight: normal;
+}
+
+.small-crd {
+	width: 14rem;
+}
+
+.marker-btn {
+	
+	display: block;
+	border: none;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	z-index: 1;
+}
+
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Nunito+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
