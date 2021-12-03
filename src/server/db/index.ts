@@ -35,8 +35,10 @@ export const Query = <T = any>(query: string, values?: {} | Array<number | strin
 
 import card_data from './queries/card_data';
 import restaurants from './queries/restaurants';
+import cardtags from './queries/cardtags';
 
 export default {
     card_data,
-    restaurants 
+    restaurants,
+    cardtags 
 }
