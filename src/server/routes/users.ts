@@ -1,10 +1,22 @@
 import { Router } from "express";
 
+import db from '../db';
+
 const router = Router();
 
-// GET /api/users/
+//gET API/users
 router.get('/', (req, res) => {
-    res.json({ msg: 'TEST USERS GET' })
+    router.get('/', async (req, res) => {
+        try {
+            const users = await db.users.all();
+            res.json(users);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({msg: 'Ohhh you in trouble girl', error });
+            
+        }
+     });
 });
+
 
 export default router;

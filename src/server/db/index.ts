@@ -1,28 +1,16 @@
 import * as mysql from 'mysql';
 import config from '../config';
 
-/* Creating a pool allows the server to form multiple connections
-to the database. Importing and using the mysql user data from the 
-config folder allows the server to access user database privileges
-and queries. */
 
 const pool = mysql.createPool(config.mysql);
 
-//Leaving Query with type any is bad practice, work out proper typing later.
 
-export const Query = <T = any>(query: string, values?: {} | Array<number | string>) => {
+export const Query = <T = any>(query: string, values?: any) => {
 
-    /* This general Query utility funtion calls for a query with type string,
-    and an optional values parameter that can accept either an object or an array.
-    The array itself can accept items as either numbers or strings. If Typescript
-    is causing too many problems, the array can be changed to type any, but this
-    is bad practice and should be avoided if possible. */
+    const sql = mysql.format(query, values);
+    //console.log(sql); DEBUGG
 
     return new Promise<T>((resolve, reject) => {
-
-        /*This basic promise handles asynchronously querying the database.
-        It resolves when successful and rejects when there is an error. */
-
         pool.query(query, values, (err, results) => {
             if (err) {
                 reject (err);
@@ -36,9 +24,13 @@ export const Query = <T = any>(query: string, values?: {} | Array<number | strin
 import card_data from './queries/card_data';
 import restaurants from './queries/restaurants';
 import cardtags from './queries/cardtags';
+import users from './queries/users'
+import locations from './queries/locations'
 
-export default {
-    card_data,
+export default{
     restaurants,
-    cardtags 
+    users,
+    locations,
+    card_data,
+    cardtags
 }
