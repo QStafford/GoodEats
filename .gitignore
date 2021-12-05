@@ -6,3 +6,5 @@ src/server/config
 # production bundles
 dist/
 public/js/app.js
+
+.env
