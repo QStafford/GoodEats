@@ -1,6 +1,9 @@
 import * as React from 'react';
 
 const createUser: React.FC<createUserProps> = (props) => {
+
+    document.body.className="login-bg";
+    
 	return (
 		<>
 			<main className="container">

@@ -6,6 +6,9 @@ import card_data from '../../server/db/queries/card_data';
 import PostCard from '../components/PostCard';
 
 const Restaurant: React.FC<RestaurantProps> = (props) => {
+
+    document.body.className = "restaurant-bg";
+
     const { restaurantid } = useParams();
 	const [restaurant, setRestaurant] = React.useState<IRestaurant>(null);
     const [ posts, setPosts ] = React.useState<IPost[]>([]);
@@ -29,9 +32,9 @@ const Restaurant: React.FC<RestaurantProps> = (props) => {
                 <div className="col-12 mb-5">
                     <h1 className="text-center">Restaurant View </h1>
                 </div>
-                <div className="p-3 mb-5 bg-body rounded col-8">
+                <div className="p-3 mb-5 rounded col-8">
                     {posts.map(post => (
-                        <PostCard key = {`chirp-card-${post.id}`} post={post}/>
+                        <PostCard key = {`postcard-${post.id}`} post={post}/>
                     ))}
                 </div>
             </section>

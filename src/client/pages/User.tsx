@@ -4,6 +4,9 @@ import { Link, useParams } from "react-router-dom";
 import type { IUser, IPost } from "../../server/utils/types";
 
 const User: React.FC<UserProps> = (props) => {
+
+	document.body.className = "user-bg";
+        
 	const { userid } = useParams();
 	const [user, setUser] = React.useState<IUser>(null);
 	const [posts, setPosts] = React.useState<IPost[]>([]);
