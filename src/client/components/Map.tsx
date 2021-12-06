@@ -51,7 +51,7 @@ const Map: React.FC<MapProps> = (props) => {
                         e.preventDefault();
                         setSelectedMarker(1);
                     }}>
-                        <BsGeoAltFill className="text-tea" />
+                        <BsGeoAltFill className="text-fire" />
                     </button>
                 </Marker>
 
@@ -65,7 +65,7 @@ const Map: React.FC<MapProps> = (props) => {
                         setSelectedMarker(2);
                     }}>
 
-                        <BsGeoAltFill className="text-tea" />
+                        <BsGeoAltFill className="text-sun" />
                     </button>
                 </Marker>
 
@@ -79,7 +79,7 @@ const Map: React.FC<MapProps> = (props) => {
                         setSelectedMarker(3);
                     }}>
 
-                        <BsGeoAltFill className="text-tea" />
+                        <BsGeoAltFill className="text-fire" />
                     </button>
                 </Marker>
 
@@ -93,7 +93,7 @@ const Map: React.FC<MapProps> = (props) => {
                         setSelectedMarker(4);
                     }}>
 
-                        <BsGeoAltFill className="text-tea" />
+                        <BsGeoAltFill className="text-grass" />
                     </button>
                 </Marker>
 
@@ -121,7 +121,7 @@ const Map: React.FC<MapProps> = (props) => {
                         setSelectedMarker(6);
                     }}>
 
-                        <BsGeoAltFill className="text-tea" />
+                        <BsGeoAltFill className="text-sun" />
                     </button>
                 </Marker>
 
@@ -135,7 +135,7 @@ const Map: React.FC<MapProps> = (props) => {
                         setSelectedMarker(7);
                     }}>
 
-                        <BsGeoAltFill className="text-tea" />
+                        <BsGeoAltFill className="text-sunset" />
                     </button>
                 </Marker>
 
@@ -149,7 +149,7 @@ const Map: React.FC<MapProps> = (props) => {
                         setSelectedMarker(8);
                     }}>
 
-                        <BsGeoAltFill className="text-tea" />
+                        <BsGeoAltFill className="text-fire" />
                     </button>
                 </Marker>
 
@@ -186,7 +186,7 @@ const Map: React.FC<MapProps> = (props) => {
                         setSelectedMarker(10);
                     }}>
 
-                        <BsGeoAltFill className="text-tea" />
+                        <BsGeoAltFill className="text-grass" />
                     </button>
                 </Marker>
                 {selectedMarker == 10 && (
@@ -205,6 +205,7 @@ const Map: React.FC<MapProps> = (props) => {
                         className="mapboxgl-popup-content"
                         latitude={33.516638}
                         longitude={-86.788852}
+                        closeButton={true}
                     >
                         <div className="container bg-fire d-flex flex-wrap justify-content-center">
                             <h2 className="text-light text-center basic-font m-2">Blueprint on 3rd</h2>
@@ -259,7 +260,7 @@ const Map: React.FC<MapProps> = (props) => {
                                 </div>
                             </div>
                             <div className="container d-flex justify-content-between m-2">
-                                <Link to='/restaurants/1' className="btn btn-sm btn-tea">
+                                <Link to='/restaurant/1' className="btn btn-sm btn-tea">
                                     <p className="basic-font m-1">See More!</p>
                                 </Link>
                                 <Link to='/post' className="btn btn-sm btn-sun">
@@ -329,7 +330,7 @@ const Map: React.FC<MapProps> = (props) => {
                                 </div>
                             </div>
                             <div className="container d-flex justify-content-between m-2">
-                                <Link to='/restaurants/2' className="btn btn-sm btn-tea">
+                                <Link to='/restaurant/2' className="btn btn-sm btn-tea">
                                     <p className="basic-font m-1">See More!</p>
                                 </Link>
                                 <Link to='/post' className="btn btn-sm btn-sun">
@@ -399,7 +400,7 @@ const Map: React.FC<MapProps> = (props) => {
                                 </div>
                             </div>
                             <div className="container d-flex justify-content-between m-2">
-                                <Link to='/restaurants/3' className="btn btn-sm btn-tea">
+                                <Link to='/restaurant/3' className="btn btn-sm btn-tea">
                                     <p className="basic-font m-1">See More!</p>
                                 </Link>
                                 <Link to='/post' className="btn btn-sm btn-sun">
@@ -469,7 +470,7 @@ const Map: React.FC<MapProps> = (props) => {
                                 </div>
                             </div>
                             <div className="container d-flex justify-content-between m-2">
-                                <Link to='/restaurants/4' className="btn btn-sm btn-tea">
+                                <Link to='/restaurant/4' className="btn btn-sm btn-tea">
                                     <p className="basic-font m-1">See More!</p>
                                 </Link>
                                 <Link to='/post' className="btn btn-sm btn-sun">
@@ -539,7 +540,7 @@ const Map: React.FC<MapProps> = (props) => {
                                 </div>
                             </div>
                             <div className="container d-flex justify-content-between m-2">
-                                <Link to='/restaurants/5' className="btn btn-sm btn-tea">
+                                <Link to='/restaurant/5' className="btn btn-sm btn-tea">
                                     <p className="basic-font m-1">See More!</p>
                                 </Link>
                                 <Link to='/post' className="btn btn-sm btn-sun">
@@ -609,7 +610,7 @@ const Map: React.FC<MapProps> = (props) => {
                                 </div>
                             </div>
                             <div className="container d-flex justify-content-between m-2">
-                                <Link to='/restaurants/6' className="btn btn-sm btn-tea">
+                                <Link to='/restaurant/6' className="btn btn-sm btn-tea">
                                     <p className="basic-font m-1">See More!</p>
                                 </Link>
                                 <Link to='/post' className="btn btn-sm btn-sun">
@@ -679,7 +680,7 @@ const Map: React.FC<MapProps> = (props) => {
                                 </div>
                             </div>
                             <div className="container d-flex justify-content-between m-2">
-                                <Link to='/restaurants/7' className="btn btn-sm btn-tea">
+                                <Link to='/restaurant/7' className="btn btn-sm btn-tea">
                                     <p className="basic-font m-1">See More!</p>
                                 </Link>
                                 <Link to='/post' className="btn btn-sm btn-sun">
@@ -749,7 +750,7 @@ const Map: React.FC<MapProps> = (props) => {
                                 </div>
                             </div>
                             <div className="container d-flex justify-content-between m-2">
-                                <Link to='/restaurants/8' className="btn btn-sm btn-tea">
+                                <Link to='/restaurant/8' className="btn btn-sm btn-tea">
                                     <p className="basic-font m-1">See More!</p>
                                 </Link>
                                 <Link to='/post' className="btn btn-sm btn-sun">

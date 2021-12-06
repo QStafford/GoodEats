@@ -69,7 +69,7 @@ $nunito-sans: 'Nunito Sans', sans-serif;
 }
 
 .home-bg {
-	background-color:#2B575D;
+	background-color:#05A9A8;
 }
 
 .create-post-bg {
@@ -82,6 +82,10 @@ $nunito-sans: 'Nunito Sans', sans-serif;
 
 .user-bg {
 	background-color:#D9613B;
+}
+
+.restaurant-bg {
+  background-color: #2B575D
 }
 
 .login-bg {
@@ -102,14 +106,6 @@ $nunito-sans: 'Nunito Sans', sans-serif;
 	min-height: 100%;
   }
 
-  .restaurant-bg {
-	background: url("../../../public/assets/bgimages/restaurant-page-bg.jpg"); 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    min-width: 100%;
-	min-height: 100%;
-  }
 
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
