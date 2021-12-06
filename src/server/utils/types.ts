@@ -17,3 +17,23 @@ export interface IPost {
     "_created": Date
 
 }
+
+export interface IRestaurant {
+    
+    "id": number;
+    "restaurantname": string;
+    "restauranttype": string;
+    "locationid": number;
+    "_created": Date;
+
+}
+
+export interface IUser {
+    
+    "id": number;
+    "name": string;
+    "username": string;
+    "email": string;
+    "_created": Date;
+
+}

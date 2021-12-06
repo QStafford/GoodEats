@@ -1,22 +1,28 @@
 import * as React from 'react';
+import * as moment from "moment";
+import { Link, useParams } from "react-router-dom";
+import type { IRestaurant, IPost } from '../../server/utils/types';
+import card_data from '../../server/db/queries/card_data';
 import PostCard from '../components/PostCard';
-import type { IPost } from '../../server/utils/types';
 
 const Restaurant: React.FC<RestaurantProps> = (props) => {
 
     document.body.className = "restaurant-bg";
 
-	const [posts, setPosts] = React.useState<IPost[]>([]);
+    const { restaurantid } = useParams();
+	const [restaurant, setRestaurant] = React.useState<IRestaurant>(null);
+    const [ posts, setPosts ] = React.useState<IPost[]>([]);
 
     React.useEffect(() => {
         (async () => {
-            const res = await fetch('/api/posts');
-            if (res.ok) {
-                const posts = await res.json();
-                setPosts(posts);
-            } else {
-                console.log("error");
-            }
+            const res = await fetch(`/api/restaurants/${restaurantid}`);
+            const restaurant = await res.json();
+            const res2 = await fetch(`/api/card_data/${restaurantid}`);
+            const posts = await res2.json();
+
+            setRestaurant(restaurant);
+            setPosts(posts);
+        
         })()
     }, []);
 

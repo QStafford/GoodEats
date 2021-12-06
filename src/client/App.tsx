@@ -5,7 +5,7 @@ import Home from "./Pages/Home";
 import Createuser from "./Pages/CreateUser";
 import Edit from "./Pages/Edit";
 import Login from "./Pages/Login";
-import Restaurants from "./Pages/Restaurant";
+import Restaurant from "./Pages/Restaurant";
 import Suggestions from "./Pages/Suggestions";
 import Users from "./Pages/User";
 import Post from "./Pages/Post";
@@ -15,18 +15,16 @@ const App: React.FC<AppProps> = (props) => {
 	return (
 		<BrowserRouter>
 			<Navbar />
-			<main>
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/Create" element={<Createuser />} />
-					<Route path="/Edit" element={<Edit />} />
-					<Route path="/Login" element={<Login />} />
-					<Route path="/Restaurants" element={<Restaurants />} />
-					<Route path="/Suggestions" element={<Suggestions />} />
-					<Route path="/User" element={<Users />} />
-					<Route path="/Post" element={<Post />} />
-				</Routes>
-			</main>
+			<Routes>
+				<Route  path="/" element={<Home />} />
+				<Route  path="/Create" element={<Createuser />} />
+				<Route  path="/Edit" element={<Edit />} />
+				<Route  path="/Login" element={<Login />} />
+				<Route  path="/Restaurant" element={<Restaurant />} />
+				<Route  path="/Suggestions" element={<Suggestions />} />
+				<Route  path="/User" element={<Users />} />
+				<Route  path="/Post" element={<Post />} />
+			</Routes>
 		</BrowserRouter>
 
 	)
