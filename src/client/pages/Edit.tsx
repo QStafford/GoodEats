@@ -1,9 +1,13 @@
 import * as React from 'react';
+import { Link, useParams } from "react-router-dom";
+import type { IPost } from '../../server/utils/types';
 
 
 const Edit: React.FC<EditProps> = (props) => {
 
     document.body.className = "edit-post-bg";
+
+    const { postid } = useParams();
 
 	return (
 		<>

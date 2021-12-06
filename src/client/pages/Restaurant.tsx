@@ -7,8 +7,6 @@ import PostCard from '../components/PostCard';
 
 const Restaurant: React.FC<RestaurantProps> = (props) => {
 
-    document.body.className = "restaurant-bg";
-
     const { restaurantid } = useParams();
 	const [restaurant, setRestaurant] = React.useState<IRestaurant>(null);
     const [ posts, setPosts ] = React.useState<IPost[]>([]);
@@ -28,11 +26,16 @@ const Restaurant: React.FC<RestaurantProps> = (props) => {
 
     return (
         <main className="container">
-            <section className="row m-2 justify-content-center">
-                <div className="col-12 mb-5">
-                    <h1 className="text-center">Restaurant View </h1>
+            <section className="d-flex flex-wrap justify-content-between">
+                <div className="col-4 p-2 bg-rust">
+                    <h1 className="text-center basic-font">{restaurant.restaurantname}</h1>
+                    <div>
+                        <img src={`../../../public/restaurantimages/restaurant-${restaurantid}`} alt={restaurant.restaurantname}/>
+                    </div>
+                    <h2 className="text-center basic-font">{restaurant.restauranttype}</h2>
+
                 </div>
-                <div className="p-3 mb-5 rounded col-8">
+                <div className="p-3 rounded col-8">
                     {posts.map(post => (
                         <PostCard key = {`postcard-${post.id}`} post={post}/>
                     ))}
