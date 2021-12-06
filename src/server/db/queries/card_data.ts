@@ -6,8 +6,12 @@ spCardData(card_id INT)
 	JOIN users ON users.id = card_data.userid
 	WHERE card_data.id = card_id; */
 
-const retrieve = (id: number) => Query('CALL spCardData(?)', [id]);
+const retrieveOne = (id: number) => Query('CALL spCardData(?)', [id]);
+const retrieveByRestaurant = (restaurantid: number) => Query('CALL spCardDataByRestaurant(?)', [restaurantid]);
+const retrieveByUser = (userid: number) => Query('CALL spCardDataByUser(?)', [userid]);
 
 export default {
-    retrieve
+    retrieveOne,
+	retrieveByRestaurant,
+	retrieveByUser
 }
