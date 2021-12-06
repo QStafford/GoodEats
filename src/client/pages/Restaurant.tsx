@@ -31,7 +31,7 @@ const Restaurant: React.FC<RestaurantProps> = (props) => {
                 <div className="col-4 p-2 bg-rust">
                     <h1 className="text-center basic-font">{restaurant.restaurantname}</h1>
                     <div>
-                        <img src={`../../../public/restaurantimages/restaurant-${restaurantid}`} alt={restaurant.restaurantname}/>
+                        <img src={`../../../public/restaurantimages/restaurantimg-${restaurantid}.jpg`} alt={restaurant.restaurantname}/>
                     </div>
                     <h2 className="text-center basic-font">{restaurant.restauranttype}</h2>
                 </div>
