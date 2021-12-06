@@ -1,6 +1,9 @@
 import * as React from 'react';
 
 const Post: React.FC<PostProps> = (props) => {
+     
+    document.body.className = "create-post-bg";
+
 	return (
 		<>
 			<h1>Post</h1>

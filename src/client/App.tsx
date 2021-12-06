@@ -9,6 +9,7 @@ import Restaurant from "./pages/Restaurant";
 import Suggestions from "./pages/Suggestions";
 import Users from "./pages/User";
 import Post from "./pages/Post";
+
 import Navbar from "./components/Navbar"
 
 const App: React.FC<AppProps> = (props) => {
@@ -24,6 +25,7 @@ const App: React.FC<AppProps> = (props) => {
 				<Route  path="/suggestions" element={<Suggestions />} />
 				<Route  path="/user/:id" element={<Users />} />
 				<Route  path="/post" element={<Post />} />
+
 			</Routes>
 		</BrowserRouter>
 

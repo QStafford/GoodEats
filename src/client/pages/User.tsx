@@ -29,12 +29,17 @@ const User: React.FC<UserProps> = (props) => {
 
 	return (
 		<>
-			<main className="container">
-				<section className="row">
-					<div className="col-12">
-						<h1 className="display-1 text-center">User View</h1>
+			<main className="container d-flex flex-wrap justify-content-center user-nomar">
+				{/* header that pulls the username to display  */}
+					<div className="d-flex flex-wrap bg-rust user-header p-4">
+						<h1 className="basic-font text-light">{user.username}</h1>
 					</div>
-				</section>
+					{/* card feed container*/}
+					<div className="container col-8 d-flex flex-wrap justify-content-center m-2">
+					{posts.map(post => (
+                        <PostCard key = {`postcard-${post.id}`} post={post}/>
+                    ))}
+					</div>
 			</main>
 		</>
 	

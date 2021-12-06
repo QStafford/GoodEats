@@ -1,6 +1,9 @@
 import * as React from 'react';
 
 const Suggestions: React.FC<SuggestionsProps> = (props) => {
+
+    document.body.className="suggest-bg";
+    
 	return (
 		<>
 			<h1>Suggestions</h1>
