@@ -4,11 +4,13 @@ import db from '../db';
 
 const router = Router();
 
-//gET API/REASTAURANTS
-router.get('/', async (req, res) => {
+//gET API/RESTAURANTS
+router.get('/:id?', async (req, res) => {
+    const restaurantid = Number(req.params.id);
+
    try {
-       const restaurants = await db.restaurants.all();
-       res.json(restaurants);
+       const [restaurant] = await db.restaurants.one(restaurantid);
+       res.json(restaurant);
    } catch (error) {
        console.log(error);
        res.status(500).json({msg: 'Ohhh you in trouble girl', error });
