@@ -2,6 +2,9 @@ import * as React from 'react';
 
 
 const Edit: React.FC<EditProps> = (props) => {
+
+    document.body.className = "edit-post-bg";
+
 	return (
 		<>
 			<h1>Edit</h1>

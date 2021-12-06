@@ -15,16 +15,18 @@ const App: React.FC<AppProps> = (props) => {
 	return (
 		<BrowserRouter>
 			<Navbar />
-			<Routes>
-				<Route  path="/" element={<Home />} />
-				<Route  path="/Create" element={<Createuser />} />
-				<Route  path="/Edit" element={<Edit />} />
-				<Route  path="/Login" element={<Login />} />
-				<Route  path="/Restaurants" element={<Restaurants />} />
-				<Route  path="/Suggestions" element={<Suggestions />} />
-				<Route  path="/User" element={<Users />} />
-				<Route  path="/Post" element={<Post />} />
-			</Routes>
+			<main>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/Create" element={<Createuser />} />
+					<Route path="/Edit" element={<Edit />} />
+					<Route path="/Login" element={<Login />} />
+					<Route path="/Restaurants" element={<Restaurants />} />
+					<Route path="/Suggestions" element={<Suggestions />} />
+					<Route path="/User" element={<Users />} />
+					<Route path="/Post" element={<Post />} />
+				</Routes>
+			</main>
 		</BrowserRouter>
 
 	)

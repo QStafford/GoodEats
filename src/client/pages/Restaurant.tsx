@@ -3,6 +3,9 @@ import PostCard from '../components/PostCard';
 import type { IPost } from '../../server/utils/types';
 
 const Restaurant: React.FC<RestaurantProps> = (props) => {
+
+    document.body.className = "restaurant-bg";
+
 	const [posts, setPosts] = React.useState<IPost[]>([]);
 
     React.useEffect(() => {
@@ -23,9 +26,9 @@ const Restaurant: React.FC<RestaurantProps> = (props) => {
                 <div className="col-12 mb-5">
                     <h1 className="text-center">Restaurant View </h1>
                 </div>
-                <div className="p-3 mb-5 bg-body rounded col-8">
+                <div className="p-3 mb-5 rounded col-8">
                     {posts.map(post => (
-                        <PostCard key = {`chirp-card-${post.id}`} post={post}/>
+                        <PostCard key = {`postcard-${post.id}`} post={post}/>
                     ))}
                 </div>
             </section>

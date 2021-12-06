@@ -1,23 +1,26 @@
 import * as React from 'react';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 import type { IPost } from '../../server/utils/types';
 
 
 const PostCard: React.FC<PostCardProps> = props => {
 
     return (
-        <div className="card">
+        <div className="card m-2">
             <div className="card-body">
-                <p className="card-text">{props.post._created}</p>
-                <p className="card-title fw-bold">{props.post.title}</p>
-                <p className="card-text">{}</p>
-                <div className="d-flex justify-content-between">
-                    <p className="card-text">{props.post.username}</p>
-                    <p className="card-text">{props.post.restaurantname}</p>
+                <div className="d-flex justify-content-end">
+                    <p className="card-text basic-font">{props.post._created}</p>
                 </div>
-                <p className="card-text">{props.post.content}</p>
-                <p className="card-text">{props.post.tags}</p>
+                <img className="card-img-top" src={`../../../public/assets/postimages/cardimage-${props.post.id}`} alt={props.post.title} />
+                <div className="d-flex justify-content-between">
+                    <p className="card-text basic-font">{props.post.username}</p>
+                    <p className="card-text basic-font">{props.post.restaurantname}</p>
+                </div>
+                <p className="card-text text-center basic-font">{props.post.content}</p>
+                <p className="card-text text-center basic-font">{props.post.tags}</p>
             </div>
+            <Link to={`/edit/${props.post.id}`} className="btn btn-sm btn-sunset text-light basic-font m-2">Edit Post</Link>
         </div>
     )
 }

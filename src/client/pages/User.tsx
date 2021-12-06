@@ -1,6 +1,9 @@
 import * as React from 'react';
 
 const User: React.FC<UserProps> = (props) => {
+
+	document.body.className = "user-bg";
+
 	return (
 		<>
 			<main className="container">
