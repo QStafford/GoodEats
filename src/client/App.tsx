@@ -18,9 +18,9 @@ const App: React.FC<AppProps> = (props) => {
 				<Route  path="/" element={<Home />} />
 				<Route  path="/Create" element={<Createuser />} />
 				<Route  path="/Login" element={<Login />} />
-				<Route  path="/Restaurant" element={<Restaurant />} />
+				<Route  path="/Restaurants/:restaurantid" element={<Restaurant />} />
 				<Route  path="/Suggestions" element={<Suggestions />} />
-				<Route  path="/User" element={<Users />} />
+				<Route  path="/User/:userid" element={<Users />} />
 				<Route  path="/Post" element={<Post />} />
 			</Routes>
 		</BrowserRouter>
