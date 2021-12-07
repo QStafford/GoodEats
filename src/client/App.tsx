@@ -3,7 +3,6 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
 import Home from "./Pages/Home";
 import Createuser from "./Pages/CreateUser";
-import Edit from "./Pages/Edit";
 import Login from "./Pages/Login";
 import Restaurant from "./Pages/Restaurant";
 import Suggestions from "./Pages/Suggestions";
@@ -18,7 +17,6 @@ const App: React.FC<AppProps> = (props) => {
 			<Routes>
 				<Route  path="/" element={<Home />} />
 				<Route  path="/Create" element={<Createuser />} />
-				<Route  path="/Edit" element={<Edit />} />
 				<Route  path="/Login" element={<Login />} />
 				<Route  path="/Restaurant" element={<Restaurant />} />
 				<Route  path="/Suggestions" element={<Suggestions />} />
