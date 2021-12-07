@@ -20,7 +20,6 @@ const PostCard: React.FC<PostCardProps> = props => {
                 <p className="card-text text-center basic-font">{props.post.content}</p>
                 <p className="card-text text-center basic-font">{props.post.tags}</p>
             </div>
-            <Link to={`/edit/${props.post.id}`} className="btn btn-sm btn-sunset text-light basic-font m-2">Edit Post</Link>
         </div>
     )
 }
