@@ -1,9 +1,8 @@
 import * as React from 'react';
 
-
 const Suggestions: React.FC<SuggestionsProps> = (props) => {
 
-    document.body.className="suggest-bg";
+    document.body.className = "suggest-bg";
     
 	return (
 		<>
@@ -32,9 +31,9 @@ const Suggestions: React.FC<SuggestionsProps> = (props) => {
                 </div>
             </main>
 		</>
-	
-	)}
+	 )
+}
 
-interface SuggestionsProps {}
+interface SuggestionsProps { }
 
 export default Suggestions;

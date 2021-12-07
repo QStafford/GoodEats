@@ -37,9 +37,3 @@ export interface IUser {
     "_created": Date;
 
 }
-
-export interface ITag {
-
-    "id": number;
-    "name": string;
-}

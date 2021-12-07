@@ -166,7 +166,16 @@ const Map: React.FC<MapProps> = (props) => {
                         <BsGeoAltFill className="text-tea" />
                     </button>
                 </Marker>
-
+                {selectedMarker == 9 && (
+                    <Popup
+                        latitude={33.525448}
+                        longitude={-86.808526}
+                    >
+                        <div>
+                            <p className="text-dark">Todd English P.U.B.</p>
+                        </div>
+                    </Popup>
+                )}
                 {/* EastWest marker */}
                 <Marker
                     latitude={33.517515}
@@ -180,7 +189,16 @@ const Map: React.FC<MapProps> = (props) => {
                         <BsGeoAltFill className="text-grass" />
                     </button>
                 </Marker>
-
+                {selectedMarker == 10 && (
+                    <Popup
+                        latitude={33.517515}
+                        longitude={-86.802017}
+                    >
+                        <div>
+                            <p className="text-dark">EastWest</p>
+                        </div>
+                    </Popup>
+                )}
                 {/* Bluprint on 3rd popup */}
                 {selectedMarker == 1 && (
                     <Popup
@@ -199,8 +217,8 @@ const Map: React.FC<MapProps> = (props) => {
                                         </div>
                                         <img className="card-img-top" src="https://s3-media0.fl.yelpcdn.com/bphoto/-lXj9nLjHKuVRrJNvywFcw/o.jpg" alt="surf and swamp" />
                                         <div className="d-flex justify-content-between">
-                                            <p className="card-text basic-font smaller-font">SammieEatsBham</p>
-                                            <p className="card-text basic-font smaller-font">Blueprint on 3rd</p>
+                                            <p className="card-text basic-font small-font">SammieEatsBham</p>
+                                            <p className="card-text basic-font small-font">Blueprint on 3rd</p>
                                         </div>
                                         <p className="card-text text-center basic-font small-font">
                                             Had the Surf and Swamp at Blueprint on 3rd and totally felt like I was right in the Bayou!!!! Swim the swamp to get to this meal.
@@ -479,8 +497,8 @@ const Map: React.FC<MapProps> = (props) => {
                                         </div>
                                         <img className="card-img-top" src="https://s3-media0.fl.yelpcdn.com/bphoto/QsuH_5vP4luMg5AH0RaO0g/o.jpg" alt="wings" />
                                         <div className="d-flex justify-content-between">
-                                            <p className="card-text basic-font smaller-font">GMann</p>
-                                            <p className="card-text basic-font smaller-font">Carrigan's Public House</p>
+                                            <p className="card-text basic-font small-font">GMann</p>
+                                            <p className="card-text basic-font small-font">Carrigan's Public House</p>
                                         </div>
                                         <p className="card-text text-center basic-font small-font">
                                             Chx wings get in my Belly!!
@@ -495,8 +513,8 @@ const Map: React.FC<MapProps> = (props) => {
                                         </div>
                                         <img className="card-img-top" src="https://s3-media0.fl.yelpcdn.com/bphoto/xgkCkVaZEJBTTF6sQ80NIg/o.jpg" alt="snacks" />
                                         <div className="d-flex justify-content-between">
-                                            <p className="card-text basic-font smaller-font">Joshanator</p>
-                                            <p className="card-text basic-font smaller-font">Carrigan's Public House</p>
+                                            <p className="card-text basic-font small-font">Joshanator</p>
+                                            <p className="card-text basic-font small-font">Carrigan's Public House</p>
                                         </div>
                                         <p className="card-text text-center basic-font small-font">
                                             Schnitzel Fingers greatest beer snack!!!!
@@ -511,8 +529,8 @@ const Map: React.FC<MapProps> = (props) => {
                                         </div>
                                         <img className="card-img-top" src="https://s3-media0.fl.yelpcdn.com/bphoto/_-le2YDs0frWV7GrMVWmlA/o.jpg" alt="wings, sausage" />
                                         <div className="d-flex justify-content-between">
-                                            <p className="card-text basic-font smaller-font">BottomsUp</p>
-                                            <p className="card-text basic-font smaller-font">Carrigan's Public House</p>
+                                            <p className="card-text basic-font small-font">BottomsUp</p>
+                                            <p className="card-text basic-font small-font">Carrigan's Public House</p>
                                         </div>
                                         <p className="card-text text-center basic-font small-font">
                                             Wings, corndog, bratwurst… the holy trinity!
@@ -733,146 +751,6 @@ const Map: React.FC<MapProps> = (props) => {
                             </div>
                             <div className="container d-flex justify-content-between m-2">
                                 <Link to='/restaurant/8' className="btn btn-sm btn-tea">
-                                    <p className="basic-font m-1">See More!</p>
-                                </Link>
-                                <Link to='/post' className="btn btn-sm btn-sun">
-                                    <p className="basic-font m-1">Post Your Dish!</p>
-                                </Link>
-                            </div>
-                        </div>
-                    </Popup>
-                )}
-                {/* Todd English P.U.B. popup */}
-                {selectedMarker == 9 && (
-                    <Popup
-                        className="mapboxgl-popup-content"
-                        latitude={33.525448}
-                        longitude={-86.808526}
-                    >
-                        <div className="container bg-fire d-flex flex-wrap justify-content-center">
-                            <h2 className="text-light text-center basic-font m-2">Todd English P.U.B.</h2>
-                            <div className="container bg-fire d-flex flex-wrap justify-content-center">
-                                <div className="card small-crd m-1">
-                                    <div className="card-body">
-                                        <div className="d-flex justify-content-end">
-                                            <p className="card-text m-2 basic-font small-font">11-29-2021</p>
-                                        </div>
-                                        <img className="card-img-top" src="https://s3-media0.fl.yelpcdn.com/bphoto/4LofwA1YF-oyUHHOx1TtXw/o.jpg" alt="fish and chips" />
-                                        <div className="d-flex justify-content-between">
-                                            <p className="card-text basic-font smaller-font">GoBestFriend</p>
-                                            <p className="card-text basic-font smaller-font">Todd English P.U.B.</p>
-                                        </div>
-                                        <p className="card-text text-center basic-font small-font">
-                                            Fish and Chips for the win !!!
-                                        </p>
-                                        <p className="card-text text-center basic-font small-font">tags</p>
-                                    </div>
-                                </div>
-                                <div className="card small-crd m-1">
-                                    <div className="card-body">
-                                        <div className="d-flex justify-content-end">
-                                            <p className="card-text m-2 basic-font small-font">11-29-2021</p>
-                                        </div>
-                                        <img className="card-img-top" src="https://s3-media0.fl.yelpcdn.com/bphoto/elBREU0nTGammDD7zxSyqw/o.jpg" alt="Todd English pub" />
-                                        <div className="d-flex justify-content-between">
-                                            <p className="card-text basic-font smaller-font">WhataWonderfulDay</p>
-                                            <p className="card-text basic-font smaller-font">Todd English P.U.B.</p>
-                                        </div>
-                                        <p className="card-text text-center basic-font small-font">
-                                            Perfect Lunch combo!
-                                        </p>
-                                        <p className="card-text text-center basic-font small-font">tags</p>
-                                    </div>
-                                </div>
-                                <div className="card small-crd m-1">
-                                    <div className="card-body">
-                                        <div className="d-flex justify-content-end">
-                                            <p className="card-text m-2 basic-font small-font">11-29-2021</p>
-                                        </div>
-                                        <img className="card-img-top" src="https://s3-media0.fl.yelpcdn.com/bphoto/Q13f0u86N6Xb0lDOBWK_wg/o.jpg" alt="tuna burger" />
-                                        <div className="d-flex justify-content-between">
-                                            <p className="card-text basic-font smaller-font">UptownEats</p>
-                                            <p className="card-text basic-font smaller-font">Todd English P.U.B.</p>
-                                        </div>
-                                        <p className="card-text text-center basic-font small-font">
-                                            Chopped Tuna Burger! This was so good!
-                                        </p>
-                                        <p className="card-text text-center basic-font small-font">tags</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="container d-flex justify-content-between m-2">
-                                <Link to='/restaurant/9' className="btn btn-sm btn-tea">
-                                    <p className="basic-font m-1">See More!</p>
-                                </Link>
-                                <Link to='/post' className="btn btn-sm btn-sun">
-                                    <p className="basic-font m-1">Post Your Dish!</p>
-                                </Link>
-                            </div>
-                        </div>
-                    </Popup>
-                )}
-                {/* EastWest popup */}
-                {selectedMarker == 10 && (
-                    <Popup
-                        className="mapboxgl-popup-content"
-                        latitude={33.517515}
-                        longitude={-86.802017}
-                    >
-                        <div className="container bg-fire d-flex flex-wrap justify-content-center">
-                            <h2 className="text-light text-center basic-font m-2">EastWest</h2>
-                            <div className="container bg-fire d-flex flex-wrap justify-content-center">
-                                <div className="card small-crd m-1">
-                                    <div className="card-body">
-                                        <div className="d-flex justify-content-end">
-                                            <p className="card-text m-2 basic-font small-font">11-29-2021</p>
-                                        </div>
-                                        <img className="card-img-top" src="https://s3-media0.fl.yelpcdn.com/bphoto/L1LpwetBZpwoligrbj3UHQ/o.jpg" alt="shrimp and grits" />
-                                        <div className="d-flex justify-content-between">
-                                            <p className="card-text basic-font small-font">SewandEat</p>
-                                            <p className="card-text basic-font small-font">EastWest</p>
-                                        </div>
-                                        <p className="card-text text-center basic-font small-font">
-                                            Shrimp and Grits with asian flare!
-                                        </p>
-                                        <p className="card-text text-center basic-font small-font">tags</p>
-                                    </div>
-                                </div>
-                                <div className="card small-crd m-1">
-                                    <div className="card-body">
-                                        <div className="d-flex justify-content-end">
-                                            <p className="card-text m-2 basic-font small-font">11-29-2021</p>
-                                        </div>
-                                        <img className="card-img-top" src="https://s3-media0.fl.yelpcdn.com/bphoto/vIxzntI1altfQBNMvAniQw/o.jpg" alt="buns and pork belly" />
-                                        <div className="d-flex justify-content-between">
-                                            <p className="card-text basic-font small-font">Ben10</p>
-                                            <p className="card-text basic-font small-font">EastWest</p>
-                                        </div>
-                                        <p className="card-text text-center basic-font small-font">
-                                            Warm bun, crispy pork belly and cream sriracha sauce makes me a happy boy!
-                                        </p>
-                                        <p className="card-text text-center basic-font small-font">tags</p>
-                                    </div>
-                                </div>
-                                <div className="card small-crd m-1">
-                                    <div className="card-body">
-                                        <div className="d-flex justify-content-end">
-                                            <p className="card-text m-2 basic-font small-font">11-29-2021</p>
-                                        </div>
-                                        <img className="card-img-top" src="https://s3-media0.fl.yelpcdn.com/bphoto/4fol0oZPXkmTdhApDUIqHQ/o.jpg" alt="lettuce wraps" />
-                                        <div className="d-flex justify-content-between">
-                                            <p className="card-text basic-font small-font">BunnyBuster</p>
-                                            <p className="card-text basic-font small-font">EastWest</p>
-                                        </div>
-                                        <p className="card-text text-center basic-font small-font">
-                                            The only way I will eat lettuce is in these chicken lettuce wraps
-                                        </p>
-                                        <p className="card-text text-center basic-font small-font">tags</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="container d-flex justify-content-between m-2">
-                                <Link to='/restaurant/10' className="btn btn-sm btn-tea">
                                     <p className="basic-font m-1">See More!</p>
                                 </Link>
                                 <Link to='/post' className="btn btn-sm btn-sun">
