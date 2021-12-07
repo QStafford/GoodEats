@@ -16,10 +16,11 @@ const Restaurant: React.FC<RestaurantProps> = (props) => {
             const res = await fetch(`/api/restaurants/${restaurantid}`);
             const restaurant = await res.json();
             const res2 = await fetch(`/api/card_data/${restaurantid}`);
-            const posts = await res2.json();
+            const card_posts = await res2.json();
+            console.log(card_posts);
 
             setRestaurant(restaurant);
-            setPosts(posts);
+            // setPosts(posts);
         
         })()
     }, []);
@@ -28,11 +29,11 @@ const Restaurant: React.FC<RestaurantProps> = (props) => {
         <main className="container">
             <section className="d-flex flex-wrap justify-content-between">
                 <div className="col-4 p-2 bg-rust">
-                    <h1 className="text-center basic-font">{restaurant.restaurantname}</h1>
+                    <h1 className="text-center basic-font">{restaurant?.restaurantname}</h1>
                     <div>
-                        <img src={`../../../public/restaurantimages/restaurant-${restaurantid}`} alt={restaurant.restaurantname}/>
+                        <img src={`../../../public/assets/restaurantimages/restaurantimg-${restaurantid}`} alt={restaurant?.restaurantname}/>
                     </div>
-                    <h2 className="text-center basic-font">{restaurant.restauranttype}</h2>
+                    <h2 className="text-center basic-font">{restaurant?.restauranttype}</h2>
 
                 </div>
                 <div className="p-3 rounded col-8">
